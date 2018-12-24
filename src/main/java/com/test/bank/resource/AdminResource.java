@@ -22,7 +22,7 @@ import javax.ws.rs.core.Response;
 
 import static org.jose4j.mac.MacUtil.HMAC_SHA256;
 
-@Path("/bank")
+@Path("")
 @Produces(MediaType.APPLICATION_JSON)
 public class AdminResource extends BaseResource {
 
