@@ -50,8 +50,7 @@ public class TransactionResource extends BaseResource {
     @RolesAllowed(Role.VIEW_TRANSACTION_LOG)
     public Response log(@Auth Principal adminUser,
                         @PathParam("userId") int userId) {
-        transactionService.getTransactionLog(userId);
-        return Response.ok().build();
+        return Response.ok(transactionService.getTransactionLog(userId)).build();
     }
 
     @POST
