@@ -45,3 +45,20 @@ docker-compose up -d
 ```
 * run project with your run configuration, pass `server` in program argument (please see dropwizard launch configuration)
 * call API with postman to verify your code works very well
+
+## Initial Data
+Admin
+
+| account  | password |
+|----------|----------|
+| root     | password |
+| operator | password |
+| manager  | password |
+
+User
+
+| id | amount |
+|----|--------|
+| 1  | 10000  |
+| 2  | 10000  |
+
