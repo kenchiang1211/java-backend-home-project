@@ -37,6 +37,7 @@ P.S. All the task you have to do is already comment with
 1. IntelliJ IDE (recommend)
 2. Docker & Docker compose (must)
 3. Postman (recommend)
+4. JAVA 8 (must)
 
 ## How to run
 * run docker compose in terminal
