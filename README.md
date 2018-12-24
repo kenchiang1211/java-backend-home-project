@@ -14,12 +14,12 @@ System component:
 
 ## What you have to implement
 1. admin login logic
-2. [save admin login token and profile information into redis 
+2. save admin login token and profile information into redis 
 3. authentication
 4. authorization
 5. user transaction with
-    1. transfer
-    2. credit/debit
+    1. transfer (should add transaction log)
+    2. credit/debit  (should add transaction log)
     3. view transaction log
     
 P.S. All the task you have to do is already comment with 
