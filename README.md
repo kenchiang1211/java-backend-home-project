@@ -11,6 +11,9 @@ System component:
 1. redis - cache
 2. mysql - database
 
+## Important
+Before starting to develop, please `Fork` this project to your github account, when you finished please send the `Forked` repo link back
+
 
 ## What you have to implement
 1. admin login logic
