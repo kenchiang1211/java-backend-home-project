@@ -15,7 +15,10 @@ System component:
 Before starting to develop, please `Fork` this project to your github account, when you finished please send the `Forked` repo link back
 
 
+
 ## What you have to implement
+This is a simple bank service, let admin manage customer's wallet with transfer/credit/view operation,
+the needed schema will generate automatically when you bootstrap your docker mysql image, please to see `docker-compose.yml` for detail configurations.
 1. admin login logic
 2. save admin login token and needed profile information into redis (something maybe you can write into JWT token)
 3. authentication
