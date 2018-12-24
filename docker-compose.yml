@@ -1,0 +1,19 @@
+version: '2.0'
+services:
+  mysql:
+    image: mysql:8.0.13
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    volumes:
+      - ./initdb:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: bank
+    ports:
+      - 3308:3306
+  redis:
+    image: redis:5.0-alpine
+    hostname: redis
+    ports:
+      - 6382:6379
+
