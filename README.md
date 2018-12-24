@@ -17,7 +17,7 @@ Before starting to develop, please `Fork` this project to your github account, w
 
 ## What you have to implement
 1. admin login logic
-2. save admin login token and profile information into redis 
+2. save admin login token and needed profile information into redis (something maybe you can write into JWT token)
 3. authentication
 4. authorization
 5. user wallet transaction
