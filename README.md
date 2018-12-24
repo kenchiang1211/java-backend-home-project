@@ -17,7 +17,7 @@ System component:
 2. save admin login token and profile information into redis 
 3. authentication
 4. authorization
-5. user transaction with
+5. user wallet transaction
     1. transfer (should add transaction log)
     2. credit/debit  (should add transaction log)
     3. view transaction log
