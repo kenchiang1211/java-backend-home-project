@@ -57,7 +57,7 @@ public class AdminResource extends BaseResource {
 
         final JsonWebSignature jws = new JsonWebSignature();
         jws.setPayload(claims.toJson());
-        jws.setAlgorithmHeaderValue(HMAC_SHA256);
+        jws.setAlgorithmHeaderValue("HS256");
         jws.setKey(new HmacKey(jwtTokenSecret));
 
         String token = jws.getCompactSerialization();
