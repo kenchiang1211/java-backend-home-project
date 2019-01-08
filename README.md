@@ -69,8 +69,8 @@ User
 * If you don't get familiar with the execution way of IntelliJ, you can use CLI to build and execute your code:
 
 ```
-$ mvn clean package
-$ java -jar target/bank-1.0-shaded.jar server
+mvn clean package
+java -jar target/bank-1.0-shaded.jar server
 ```
 
 * Welcome to share your idea and ask questions to us, don't be shy.
