@@ -73,4 +73,5 @@ mvn clean package
 java -jar target/bank-1.0-shaded.jar server
 ```
 
+* Please finish this project if you can. But don't worry if the project is not completed, you can share the parts which you finished with us.
 * Welcome to share your idea and ask questions to us, don't be shy.
