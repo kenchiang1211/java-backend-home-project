@@ -10,6 +10,7 @@ import org.jose4j.jwt.JwtClaims;
 import org.jose4j.keys.HmacKey;
 import org.jose4j.lang.JoseException;
 import org.redisson.api.RedissonClient;
+import org.redisson.api.RMapCache;
 
 import javax.inject.Inject;
 import javax.validation.Valid;
@@ -19,6 +20,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.concurrent.TimeUnit;
 
 import static org.jose4j.mac.MacUtil.HMAC_SHA256;
 
@@ -30,6 +32,7 @@ public class AdminResource extends BaseResource {
     private AdminService adminService;
     private RedissonClient redissonClient;
     private static final int MINUTE_TO_LIVE = 720;
+    private RMapCache<String, String> cache;
 
     @Inject
     public AdminResource(EnvConfigManager envConfigManager,
@@ -62,8 +65,9 @@ public class AdminResource extends BaseResource {
 
         String token = jws.getCompactSerialization();
 
+        System.out.println("test code");
         // TODO add redis save token
-
+        this.cache.put(adminUserVo.getAccount(), token, MINUTE_TO_LIVE*60, TimeUnit.SECONDS); //?? login 時應該要先從 redis 拿 token 之類的？
 
         return Response.ok().build();
     }
