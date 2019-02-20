@@ -63,3 +63,25 @@ User
 | 1  | 10000  |
 | 2  | 10000  |
 
+## Hint
+
+* It's suggested to debug with ObjectMapper and Logger (like slf4j)
+* If you don't get familiar with the execution way of IntelliJ, you can use CLI to build and execute your code:
+
+```
+mvn clean package
+java -jar target/bank-1.0-shaded.jar server
+```
+
+* Please trust the autocomplete provided by your IDE, you can find many hints.
+
+* As for Jooq, the basic code usage can be: (BIG HINT)
+
+```
+DSL.using(configuration). ...
+```
+
+Please use this code segment and your IDE autocomplete to find the method you should use. (Of course, please read document if you need.)
+
+* Please finish this project if you can. But don't worry if the project is not completed, you can share the parts which you finished with us.
+* Welcome to share your idea and ask questions to us, don't be shy.
