@@ -5,9 +5,7 @@ package com.test.bank.db;
 
 
 import com.test.bank.db.tables.Admin;
-import com.test.bank.db.tables.Adminrole;
-import com.test.bank.db.tables.Role;
-import com.test.bank.db.tables.Transaction;
+import com.test.bank.db.tables.Token;
 import com.test.bank.db.tables.User;
 
 import javax.annotation.Generated;
@@ -35,13 +33,8 @@ public class Indexes {
     // -------------------------------------------------------------------------
 
     public static final Index ADMIN_PRIMARY = Indexes0.ADMIN_PRIMARY;
-    public static final Index ADMINROLE_ADMINID = Indexes0.ADMINROLE_ADMINID;
-    public static final Index ADMINROLE_PRIMARY = Indexes0.ADMINROLE_PRIMARY;
-    public static final Index ROLE_PRIMARY = Indexes0.ROLE_PRIMARY;
-    public static final Index TRANSACTION_ADMINID = Indexes0.TRANSACTION_ADMINID;
-    public static final Index TRANSACTION_FROMUSERID = Indexes0.TRANSACTION_FROMUSERID;
-    public static final Index TRANSACTION_PRIMARY = Indexes0.TRANSACTION_PRIMARY;
-    public static final Index TRANSACTION_TOUSERID = Indexes0.TRANSACTION_TOUSERID;
+    public static final Index TOKEN_PRIMARY = Indexes0.TOKEN_PRIMARY;
+    public static final Index TOKEN_TOKEN = Indexes0.TOKEN_TOKEN;
     public static final Index USER_PRIMARY = Indexes0.USER_PRIMARY;
 
     // -------------------------------------------------------------------------
@@ -50,13 +43,8 @@ public class Indexes {
 
     private static class Indexes0 {
         public static Index ADMIN_PRIMARY = Internal.createIndex("PRIMARY", Admin.ADMIN, new OrderField[] { Admin.ADMIN.ID }, true);
-        public static Index ADMINROLE_ADMINID = Internal.createIndex("adminId", Adminrole.ADMINROLE, new OrderField[] { Adminrole.ADMINROLE.ADMINID }, false);
-        public static Index ADMINROLE_PRIMARY = Internal.createIndex("PRIMARY", Adminrole.ADMINROLE, new OrderField[] { Adminrole.ADMINROLE.ROLEID, Adminrole.ADMINROLE.ADMINID }, true);
-        public static Index ROLE_PRIMARY = Internal.createIndex("PRIMARY", Role.ROLE, new OrderField[] { Role.ROLE.ID }, true);
-        public static Index TRANSACTION_ADMINID = Internal.createIndex("adminId", Transaction.TRANSACTION, new OrderField[] { Transaction.TRANSACTION.ADMINID }, false);
-        public static Index TRANSACTION_FROMUSERID = Internal.createIndex("fromUserId", Transaction.TRANSACTION, new OrderField[] { Transaction.TRANSACTION.FROMUSERID }, false);
-        public static Index TRANSACTION_PRIMARY = Internal.createIndex("PRIMARY", Transaction.TRANSACTION, new OrderField[] { Transaction.TRANSACTION.ID }, true);
-        public static Index TRANSACTION_TOUSERID = Internal.createIndex("ToUserId", Transaction.TRANSACTION, new OrderField[] { Transaction.TRANSACTION.TOUSERID }, false);
+        public static Index TOKEN_PRIMARY = Internal.createIndex("PRIMARY", Token.TOKEN, new OrderField[] { Token.TOKEN.ADMINID }, true);
+        public static Index TOKEN_TOKEN = Internal.createIndex("Token", Token.TOKEN, new OrderField[] { Token.TOKEN.TOKEN_ }, false);
         public static Index USER_PRIMARY = Internal.createIndex("PRIMARY", User.USER, new OrderField[] { User.USER.ID }, true);
     }
 }

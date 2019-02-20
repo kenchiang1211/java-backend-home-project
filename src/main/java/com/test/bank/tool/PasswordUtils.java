@@ -48,7 +48,7 @@ public class PasswordUtils {
 
     public static boolean verifyUserPassword(String providedPassword,
                                              String securedPassword, String salt) {
-        boolean returnValue = false;
+        boolean returnValue;
 
         // Generate New secure password with the same salt
         String newSecurePassword = generateSecurePassword(providedPassword, salt);

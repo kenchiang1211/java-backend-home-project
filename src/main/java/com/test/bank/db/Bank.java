@@ -5,9 +5,7 @@ package com.test.bank.db;
 
 
 import com.test.bank.db.tables.Admin;
-import com.test.bank.db.tables.Adminrole;
-import com.test.bank.db.tables.Role;
-import com.test.bank.db.tables.Transaction;
+import com.test.bank.db.tables.Token;
 import com.test.bank.db.tables.User;
 
 import java.util.ArrayList;
@@ -34,7 +32,7 @@ import org.jooq.impl.SchemaImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Bank extends SchemaImpl {
 
-    private static final long serialVersionUID = -708346785;
+    private static final long serialVersionUID = 1505917663;
 
     /**
      * The reference instance of <code>bank</code>
@@ -47,19 +45,9 @@ public class Bank extends SchemaImpl {
     public final Admin ADMIN = com.test.bank.db.tables.Admin.ADMIN;
 
     /**
-     * The table <code>bank.AdminRole</code>.
+     * The table <code>bank.Token</code>.
      */
-    public final Adminrole ADMINROLE = com.test.bank.db.tables.Adminrole.ADMINROLE;
-
-    /**
-     * The table <code>bank.Role</code>.
-     */
-    public final Role ROLE = com.test.bank.db.tables.Role.ROLE;
-
-    /**
-     * The table <code>bank.Transaction</code>.
-     */
-    public final Transaction TRANSACTION = com.test.bank.db.tables.Transaction.TRANSACTION;
+    public final Token TOKEN = com.test.bank.db.tables.Token.TOKEN;
 
     /**
      * The table <code>bank.User</code>.
@@ -92,9 +80,7 @@ public class Bank extends SchemaImpl {
     private final List<Table<?>> getTables0() {
         return Arrays.<Table<?>>asList(
             Admin.ADMIN,
-            Adminrole.ADMINROLE,
-            Role.ROLE,
-            Transaction.TRANSACTION,
+            Token.TOKEN,
             User.USER);
     }
 }

@@ -5,9 +5,7 @@ package com.test.bank.db;
 
 
 import com.test.bank.db.tables.Admin;
-import com.test.bank.db.tables.Adminrole;
-import com.test.bank.db.tables.Role;
-import com.test.bank.db.tables.Transaction;
+import com.test.bank.db.tables.Token;
 import com.test.bank.db.tables.User;
 
 import javax.annotation.Generated;
@@ -32,19 +30,9 @@ public class Tables {
     public static final Admin ADMIN = com.test.bank.db.tables.Admin.ADMIN;
 
     /**
-     * The table <code>bank.AdminRole</code>.
+     * The table <code>bank.Token</code>.
      */
-    public static final Adminrole ADMINROLE = com.test.bank.db.tables.Adminrole.ADMINROLE;
-
-    /**
-     * The table <code>bank.Role</code>.
-     */
-    public static final Role ROLE = com.test.bank.db.tables.Role.ROLE;
-
-    /**
-     * The table <code>bank.Transaction</code>.
-     */
-    public static final Transaction TRANSACTION = com.test.bank.db.tables.Transaction.TRANSACTION;
+    public static final Token TOKEN = com.test.bank.db.tables.Token.TOKEN;
 
     /**
      * The table <code>bank.User</code>.

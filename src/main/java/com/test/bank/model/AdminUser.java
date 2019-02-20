@@ -1,26 +1,16 @@
-package com.test.bank.model.admin;
+package com.test.bank.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.google.common.collect.Sets;
+import javax.validation.constraints.NotNull;
 
-import java.security.Principal;
-import java.util.Set;
-
-public class AdminUserVo implements Principal {
-
-    @JsonIgnore
-    @Override
-    public String getName() {
-        return null;
-    }
+public class AdminUser {
 
     private Integer id;
 
+    @NotNull
     private String account;
 
+    @NotNull
     private String password;
-
-    private Set<String> roleSet = Sets.newHashSet();
 
     private String salt;
 
@@ -46,14 +36,6 @@ public class AdminUserVo implements Principal {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public Set<String> getRoleSet() {
-        return roleSet;
-    }
-
-    public void setRoleSet(Set<String> roleSet) {
-        this.roleSet = roleSet;
     }
 
     public String getSalt() {

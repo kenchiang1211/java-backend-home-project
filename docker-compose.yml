@@ -11,9 +11,4 @@ services:
       MYSQL_DATABASE: bank
     ports:
       - 3308:3306
-  redis:
-    image: redis:5.0-alpine
-    hostname: redis
-    ports:
-      - 6382:6379
 

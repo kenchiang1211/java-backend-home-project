@@ -68,8 +68,6 @@ public class DataSourceInitializer {
             jdbcUrl = Iterables.getLast(urls);
         }
 
-        // http://stackoverflow.com/questions/11133759/0000-00-00-000000-can-not-be-represented-as-java-sql-timestamp-error
-//        jdbcUrl += "?zeroDateTimeBehavior=convertToNull&queryInterceptors=brave.mysql8.TracingQueryInterceptor&exceptionInterceptors=brave.mysql8.TracingExceptionInterceptor";
         jdbcUrl += "?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=utf8";
 
         int maxConnections = envConfigManager.getConfigAsInt("db." + source + ".max_connections");
