@@ -68,4 +68,4 @@ Please use this code segment and your IDE autocomplete to find the method you sh
 * Welcome to share your idea and ask questions to us, don't be shy.
 * api flow diagram
 
-![api flow](https://github.com/kensomanpow/java-backend-home-project/api_flow.png)
+![api flow](https://github.com/kensomanpow/java-backend-home-project/blob/master/api_flow.png)
